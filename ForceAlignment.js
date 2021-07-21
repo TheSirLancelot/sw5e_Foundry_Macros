@@ -4,18 +4,17 @@ async function main(){
 	if(args.length > 0){
 		let actor = MidiQOL.MQfromActorUuid(args[0].actorUuid);
 		let item = await fromUuid(args[0].itemUuid);
-		//let itemName = item.name;
 		let spellLevel = args[0].spellLevel;
 		let currentResource = "";
 		let currentAllignmentValue = 0;
 		
 		if(actor.name == "Enciodas \"Erik\""){
             currentResource = 'erik_align';
-        } else if(actor.name == "Blitz"){
+	        } else if(actor.name == "Blitz"){
             currentResource = 'blitz_align';
-        } else {
-			ui.notifications.error("Power was cast by an unknown actor");
-			return;
+        	} else {
+		ui.notifications.error("Power was cast by an unknown actor");
+		return;
 		}
 		
 		currentAllignmentValue = window.pr.api.get(currentResource);
