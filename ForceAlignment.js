@@ -19,11 +19,6 @@ async function main(){
 		}
 		
 		currentAllignmentValue = window.pr.api.get(currentResource);
-		ChatMessage.create(
-                {
-                    content: "Pre getProperty: " + currentAllignmentValue,
-                    whisper: ChatMessage.getWhisperRecipients("GM")
-                })
 		
 		if(getProperty(actor.data, `flags.powerUsed.${item.name}`)){
 			//power has been used before
@@ -45,13 +40,6 @@ async function main(){
 				currentAllignmentValue -= spellLevel;
 			}
 		}
-		
-		
-		ChatMessage.create(
-		{
-			content: "Post getProperty: " + currentAllignmentValue,
-			whisper: ChatMessage.getWhisperRecipients("GM")
-		})
 		
 		if(currentAllignmentValue != 0 && currentAllignmentValue % 10 == 0){
             ChatMessage.create(
