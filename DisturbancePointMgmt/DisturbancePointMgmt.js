@@ -6,21 +6,21 @@ async function main(){
         let spellLevel = args[0].spellLevel
         
         if(actor.name == "Enciodas \"Erik\""){
-            window.pr.api.set('erik_dp', window.pr.api.get('erik_dp')+spellLevel)
+            window.pr.api.increment('erik_dp', spellLevel)
             ChatMessage.create(
                 {
                     content: "Erik's Disturbance Points have increased",
                     whisper: ChatMessage.getWhisperRecipients("GM")
                 })
         } else if(actor.name == "Blitz"){
-            window.pr.api.set('blitz_dp', window.pr.api.get('blitz_dp')+spellLevel)
+            window.pr.api.increment('blitz_dp', spellLevel)
             ChatMessage.create(
                 {
                     content: "Blitz's Disturbance Points have increased",
                     whisper: ChatMessage.getWhisperRecipients("GM")
                 })
         }
-    } else {
+    } else { //macro is manually executed after combat
         let blitzIsHunted = false
         let erikIsHunted = false
         
