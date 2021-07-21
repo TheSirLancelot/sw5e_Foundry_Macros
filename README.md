@@ -14,8 +14,8 @@ if(actor.name == "<Player Name Goes Here, Must Match Exactly>"){
         } else if(actor.name == "<Player Name Goes Here, Must Match Exactly>"){
             currentResource = '<partyResourceID>';
         } else {
-			ui.notifications.error("Power was cast by an unknown actor");
-			return;
+		ui.notifications.error("Power was cast by an unknown actor");
+		return;
 		}
 ```
 
