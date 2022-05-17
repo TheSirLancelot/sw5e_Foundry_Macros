@@ -47,6 +47,8 @@ After combat has finished (still working on a way to get this to trigger automat
 
 The `LongRest.js` associated macro is to be used when your players take a long rest. The macro will lower the players' associated Disturbance Points by an amount equal to their level. **NOTE: This macro requires you select one of your PC's tokens prior to executing. This allows the macro to know what level your players are** If you already have another macro handling long rest "stuff", you could just copy and paste this in.
 
+Edit: I have created a world script (PostCombatDpMgmt.js) that will hook the 'DeleteCombat' call. You can register this as a world script and the DP management should run after each combat. 
+
 ## Snapshot Style
 ### Requirements: Midi-QOL, Advanced Macros
 
