@@ -24,7 +24,7 @@ async function main(){
         let blitzIsHunted = false
         let erikIsHunted = false
         
-        let roll = new Roll('1d100').roll()
+        let roll = await new Roll('1d100').roll()
         let blitzDP = window.pr.api.get('blitz_dp')
         let erikDP = window.pr.api.get('erik_dp')
         
